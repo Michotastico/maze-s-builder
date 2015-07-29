@@ -4,6 +4,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<script type="text/javascript" src="MatrixOperator.js"></script>
+	<script type="text/javascript" src="Maze.js"></script>
 	<script type="text/javascript">
 		function print(where, what){
 			document.querySelector(where).innerHTML = what;
@@ -14,16 +15,25 @@
 <body>
 	<h3>Test!</h3>
 	<div class="size"></div>
-	<br>Prev<br>
+	<br>Pre<br>
 	<div class="show"></div>
-	<br>Pos<br>
+	<br>Post<br>
 	<div class="show2"></div>
+	<br>Pre Maze</br>
+	<div class="showM"></div>
+	<br>Post Maze<br>
+	<div class="showM2"></div>
 	<script type="text/javascript">
 		matrix = new Matrix(5,5);
 		print('.size',"Size: "+matrix.size);
 		print('.show', "Show: <br>"+matrix.show);
 		matrix.changeInRange([0,2],[2,4],1);
 		print('.show2', "Show: <br>"+matrix.show);
+
+		Maze = new Maze(10,10);
+		print('.showM',"Show: <br>"+Maze.show);
+		Maze.generate();
+		print('.showM2',"Show: <br>"+Maze.show);
 		
 		
 
