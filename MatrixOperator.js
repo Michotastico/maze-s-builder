@@ -53,11 +53,13 @@ class Matrix{
 	}
 
 	getLocal(x, y){
-		return this.matrix[x][y];
+		var r = this.matrix[x][y]
+		return r;
 	}
 
 	change(x, y, n){
-		var prev = self.matrix[x][y];
+		
+		var prev = this.matrix[x][y];
 		this.matrix[x][y] = n;
 		return (prev == this.matrix[x][y]);
 	}
