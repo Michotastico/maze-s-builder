@@ -1,84 +1,122 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640">
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=640">
 
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
+  <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+  <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+  <link rel="stylesheet" href="stylesheets/github-light.css">
 
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-    <script type="text/javascript" src="javascripts/MatrixOperator.js"></script>
-    <script type="text/javascript" src="javascripts/Maze.js"></script>
-    <script type="text/javascript">
-		function print(where, what){
-			document.querySelector(where).innerHTML = what;
-		}</script>
+  <script type="text/javascript" src="javascripts/modernizr.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    $('#main_content').headsmart()
+  })
+  </script>
+  <script type="text/javascript" src="javascripts/MatrixOperator.js"></script>
+  <script type="text/javascript" src="javascripts/Maze.js"></script>
+  <script type="text/javascript">
+  function print(where, what){
+    document.querySelector(where).innerHTML = what;
+  }</script>
   <title>Maze-s-builder by Michotastico</title>
-  </head>
+</head>
 
-  <body>
-    <a id="forkme_banner" href="https://github.com/Michotastico/maze-s-builder">View on GitHub</a>
-    <div class="shell">
+<body>
+  <a id="forkme_banner" href="https://github.com/Michotastico/maze-s-builder">View on GitHub</a>
+  <div class="shell">
 
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>Maze-s-builder</h1>
-            <h2>Generator of Mazes</h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
+    <header>
+      <span class="ribbon-outer">
+        <span class="ribbon-inner">
+          <h1>Maze-s-builder</h1>
+          <h2>Generator of Mazes</h2>
         </span>
-      </header>
+        <span class="left-tail"></span>
+        <span class="right-tail"></span>
+      </span>
+    </header>
 
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/Michotastico/maze-s-builder/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/Michotastico/maze-s-builder/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
-      </section>
-
-
-      <span class="banner-fix"></span>
-
-
-      <section id="main_content">
-        <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome Maze's Generator!.</h3>
-
-<p>Hi! This is the page where I test my maze's builder in js. My original project was in Python with OpenGL, but now I trying to migrate my code to js for, eventually, use it in WebGL. Please have fun! (When I allow to make changes, of course)</p>
-<h3>Test place</h3>
-	<div class="size"></div>
-	<br>Pre<br>
-	<div class="show"></div>
-	<br>Post<br>
-	<div class="show2"></div>
-	<br>Pre Maze</br>
-	<div class="showM"></div>
-	<br>Post Maze<br>
-	<div class="showM2"></div>
-	<script type="text/javascript">
-		matrix = new Matrix(5,5);
-		print('.size',"Size: "+matrix.size);
-		print('.show', "Show: <br>"+matrix.show);
-		matrix.changeInRange([0,2],[2,4],1);
-		print('.show2', "Show: <br>"+matrix.show);
-		Maze = new Maze(10, 10);
-		print('.showM',"Show: <br>"+Maze.show);
-		Maze.generate();
-		print('.showM2',"Show: <br>"+Maze.show);
+    <section id="downloads">
+      <span class="inner">
+        <a href="https://github.com/Michotastico/maze-s-builder/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/Michotastico/maze-s-builder/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+      </span>
+    </section>
 
 
-	</script>      </section>
+    <span class="banner-fix"></span>
+
+
+    <section id="main_content">
+      <h3>
+        <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome Maze's Generator!.</h3>
+
+        <p>Hi! This is the page where I test my maze's builder in js. My original project was in Python with OpenGL, but now I trying to migrate my code to js for, eventually, use it in WebGL. Please have fun! (When I allow to make changes, of course)</p>
+        <h3>Test place</h3>
+        <div id="divID">
+
+        </div>
+        <p>Automatic Maze</p>
+        <!--
+        <div class="size"></div>
+        <br>Pre<br>
+        <div class="show"></div>
+        <br>Post<br>
+        <div class="show2"></div>
+        <br>Pre Maze</br>
+        <div class="showM"></div>
+        <br>Post Maze<br>
+        <div class="showM2"></div>
+        <script type="text/javascript">
+        /*
+        matrix = new Matrix(5,5);
+        print('.size',"Size: "+matrix.size);
+        print('.show', "Show: <br>"+matrix.show);
+        matrix.changeInRange([0,2],[2,4],1);
+        print('.show2', "Show: <br>"+matrix.show);
+        Maze = new Maze(10, 10);
+        print('.showM',"Show: <br>"+Maze.show);
+        Maze.generate();
+        print('.showM2',"Show: <br>"+Maze.show);
+
+        */
+      </script>     --> </section>
+
+      <script type="text/javascript">
+      function showData()
+      {
+        var str;
+        maze = new Maze(10, 10);
+        maze.generate();
+        matrix = maze.getMaze;
+        str = "<table width='300' border='0' cellspacing='0' cellpadding='0' align='left'>";
+        for (i = 0; i < 10; i++) {
+          str += "<tr>"
+          for (o = 0; o < 10; o++){
+              pos = matrix.getLocal(i, o);
+              var color;
+              if(pos == 1){
+                color = "b06500"; //ginger
+              }
+              else {
+                color = "f0ead6"; //eggshell
+              }
+              str+="<td width='10' bgcolor=#'"+ color +"'>" + pos + "</td>"
+          }
+          str += "</tr>";
+        }
+
+        str += "</table>";
+
+        return str;
+      }
+      var adddivAll = document.getElementById("divID");
+      adddivAll.innerHTML = showData();
+      </script>
 
       <footer>
         <span class="ribbon-outer">
@@ -96,4 +134,4 @@
 
 
   </body>
-</html>
+  </html>
