@@ -39,7 +39,7 @@ class Maze{
 			var vposl = this.maze.getLocal(num_row, num_col - 1);
 			var vposr = this.maze.getLocal(num_row, num_col + 1);
 			var vnpos = this.maze.getLocal(num_row + 1, num_col);
-			var vnposi = this.maze.getLocal(num_row + 1, num_col - 1);
+			var vnposl = this.maze.getLocal(num_row + 1, num_col - 1);
 			var vnposr = this.maze.getLocal(num_row + 1, num_col + 1);
 			if (vpos == 0 && vposl == 0 && vposr == 0 && vnpos == 0 && vnposl == 0 && vnposr == 0){
 				start_point = [num_row, num_col];
@@ -66,7 +66,7 @@ class Maze{
 			var vnpos = this.maze.getLocal(num_row+1,num_col);
 			var vnposl = this.maze.getLocal(num_row+1,num_col-1);
 			var vnposr = this.maze.getLocal(num_row+1,num_col+1);
-			if (vpos == 0 && vposl == 0 && nposr == 0 && vnpos == 0 && vnposl == 0 && vnposr == 0){
+			if (vpos == 0 && vposl == 0 && vnposr == 0 && vnpos == 0 && vnposl == 0 && vnposr == 0){
 				num_row =num_row + 1;
 			}
 			else{
@@ -85,6 +85,7 @@ class Maze{
 	verticalWork(){
 		var num_row = this.randomRange(1, this.h-2);
 		var num_col = 1;
+
 		var start = [-1,-1];
 		var work = false;
 
@@ -95,9 +96,8 @@ class Maze{
 			var vnpos = this.maze.getLocal(num_row, num_col + 1);
 			var vnposl = this.maze.getLocal(num_row - 1, num_col + 1);
 			var vnposr = this.maze.getLocal(num_row + 1, num_col + 1);
-			//console.log("VARS: "+vpos+" ; "+vposl+" ; "+vposr+" ; "+vnpos+" ; "+vnposl+" ; "+vnposr);
 			if(vpos == 0 && vposl == 0 && vposr == 0 && vnpos == 0 && vnposl == 0 && vnposr == 0){
-				start = [num_row, num_col]; 
+				start = [num_row, num_col];
 				work = true;
 				break;
 			}
@@ -169,4 +169,3 @@ class Maze{
 	}
 
 }
-	
