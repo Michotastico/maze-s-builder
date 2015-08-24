@@ -64,11 +64,12 @@
         </section>
 
       <script type="text/javascript">
+      maze = new Maze(10, 10);
+      maze.generate();
       function showData()
       {
         var str;
-        maze = new Maze(10, 10);
-        maze.generate();
+
         matrix = maze.getMaze;
         str = "<table width='300' border='0' cellspacing='0' cellpadding='0' align='left'>";
         for (i = 0; i < 10; i++) {
