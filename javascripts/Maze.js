@@ -16,8 +16,9 @@ class Maze{
 		for (var i = 0; i < this.h*this.w; i++){
 			this.horizontalWork();
 			this.verticalWork();
+			this.corrector();
 		}
-		this.corrector();
+		//
 	}
 
 	randomRange(a, b){
